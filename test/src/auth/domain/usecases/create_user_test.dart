@@ -4,14 +4,14 @@ import 'package:education_tdd_app/src/auth/domain/usecases/create_user.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
+import 'auth_repository.mock.dart';
+
 // What does the class depend on
 // Answer -- AuthRepository
 // how can we create a fake version of the dependency
 // Answer -- Use Mockail
 // How do we control what our dependencies do
 // Answer -- Using the Mockail's APIs
-
-class MockAuthRepo extends Mock implements AuthRepository {}
 
 void main() {
   late CreateUser usecase;
