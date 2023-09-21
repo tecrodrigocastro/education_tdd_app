@@ -24,9 +24,9 @@ class UserModel extends User {
 
   UserModel.fromMap(DataMap map)
       : this(
-          avatar: map['avatar'] as String,
           id: map['id'] as String,
           createdAt: map['createdAt'] as String,
+          avatar: map['avatar'] as String,
           name: map['name'] as String,
         );
 
@@ -39,16 +39,16 @@ class UserModel extends User {
     return UserModel(
       id: id ?? this.id,
       createdAt: createdAt ?? this.createdAt,
-      name: name ?? this.name,
       avatar: avatar ?? this.avatar,
+      name: name ?? this.name,
     );
   }
 
   @override
   DataMap toMap() => {
         'id': id,
-        'avatar': avatar,
         'createdAt': createdAt,
+        'avatar': avatar,
         'name': name,
       };
 
